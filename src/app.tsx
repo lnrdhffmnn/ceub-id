@@ -1,7 +1,14 @@
+import { Outlet } from "react-router-dom";
+
 export default function App() {
   return (
     <>
-      <h1 className="text-3xl">:)</h1>
+      <header>
+        <h1>CEUB ID</h1>
+      </header>
+      <main>
+        <Outlet />
+      </main>
     </>
   );
 }
