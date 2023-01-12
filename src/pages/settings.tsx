@@ -57,7 +57,7 @@ export default function Settings() {
             id="input-ra"
             value={ra}
             onChange={event => setRa(event.target.value)}
-            className="font-mono mt-1 block w-full rounded-md border-zinc-300 shadow-sm focus:border-fuchsia-300 focus:ring focus:ring-fuchsia-200 focus:ring-opacity-50 text-black"
+            className="font-mono mt-1 block w-full rounded-md border-zinc-300 shadow-sm focus:border-fuchsia-300 focus:ring focus:ring-fuchsia-200 focus:ring-opacity-50"
           />
         </div>
         {code.length > 0 && (
@@ -68,7 +68,7 @@ export default function Settings() {
               id="input-code"
               value={code}
               onChange={event => setCode(event.target.value)}
-              className="font-mono mt-1 block w-full rounded-md border-zinc-300 shadow-sm focus:border-fuchsia-300 focus:ring focus:ring-fuchsia-200 focus:ring-opacity-50 text-black"
+              className="font-mono mt-1 block w-full rounded-md border-zinc-300 shadow-sm focus:border-fuchsia-300 focus:ring focus:ring-fuchsia-200 focus:ring-opacity-50"
               readOnly
             />
           </div>
