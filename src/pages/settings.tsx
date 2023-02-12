@@ -1,7 +1,35 @@
+import { FormEvent, useState } from "react";
+
 export default function Settings() {
+  const [ra, setRa] = useState("00000000");
+
+  function submit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    console.log(ra);
+  }
+
   return (
     <>
-      <p className="text-xl font-bold">Settings</p>
+      <form onSubmit={submit} className="w-full max-w-[500px] p-8 grid gap-4">
+        <div className="grid gap-1">
+          <label htmlFor="input-ra" className="font-bold">
+            RA
+          </label>
+          <input
+            type="text"
+            id="input-ra"
+            value={ra}
+            onChange={event => setRa(event.target.value)}
+            className="px-4 py-2 outline-none font-mono border border-zinc-300 focus:border-fuchsia-300 shadow-sm rounded-md focus:ring ring-fuchsia-200 ring-opacity-50"
+          />
+        </div>
+        <button
+          type="submit"
+          className="p-2 outline-none bg-gradient-to-br hover:bg-gradient-to-tl from-fuchsia-500 via-fuchsia-600 to-fuchsia-700 text-white shadow-sm rounded-md"
+        >
+          Salvar
+        </button>
+      </form>
     </>
   );
 }
