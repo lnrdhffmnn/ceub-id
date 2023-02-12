@@ -1,9 +1,13 @@
 import { Outlet } from "react-router-dom";
+import Header from "./components/header";
 
 export default function App() {
   return (
-    <>
-      <Outlet />
-    </>
+    <div className="w-screen h-screen flex flex-col items-stretch gap-8 p-8 bg-zinc-100 text-zinc-900 font-sans">
+      <Header />
+      <main className="w-full h-full flex flex-col items-center justify-center relative">
+        <Outlet />
+      </main>
+    </div>
   );
 }
