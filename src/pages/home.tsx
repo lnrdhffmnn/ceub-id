@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <QRCodeSVG
         value={ra}
-        size={250}
+        size={275}
         level="H"
         includeMargin
         className="rounded-xl shadow-xl border border-zinc-300"
