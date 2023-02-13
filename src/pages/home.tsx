@@ -1,9 +1,12 @@
+import { useAtomValue } from "jotai";
 import { QRCodeSVG } from "qrcode.react";
+import { Link } from "react-router-dom";
+import { ceubIdAtom } from "../atoms/ceub-id";
 
 export default function Home() {
-  const ra = "00000000";
+  const { ra } = useAtomValue(ceubIdAtom);
 
-  return (
+  return ra ? (
     <>
       <QRCodeSVG
         value={ra}
@@ -16,5 +19,18 @@ export default function Home() {
         {ra}
       </p>
     </>
+  ) : (
+    <p className="text-3xl text-center">
+      <span>Você precisa</span>
+      <br />
+      <Link
+        to="/settings"
+        className="text-fuchsia-600 hover:underline decoration-dotted"
+      >
+        preencher
+      </Link>
+      <br />
+      <span>seus dados.</span>
+    </p>
   );
 }
