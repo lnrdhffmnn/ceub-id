@@ -11,7 +11,8 @@ export default defineConfig({
     VitePWA({
       registerType: "autoUpdate",
       manifest: {
-        name: "Ceub Id",
+        name: "CEUB ID",
+        short_name: "CEUB ID",
         description: "",
         theme_color: "#f4f4f5",
         background_color: "#f4f4f5",
