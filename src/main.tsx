@@ -5,6 +5,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./app";
 import Home from "./pages/home";
 import Settings from "./pages/settings";
+import { registerSW } from "virtual:pwa-register";
+
+registerSW({ immediate: true });
 
 const router = createBrowserRouter([
   {

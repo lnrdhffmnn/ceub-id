@@ -3,11 +3,9 @@ import { Link } from "react-router-dom";
 export default function Header() {
   return (
     <header className="flex items-center justify-between">
-      <Link to="/">
-        <h1 className="text-4xl font-bold text-fuchsia-600 drop-shadow-sm">
-          CEUB ID
-        </h1>
-      </Link>
+      <h1 className="text-4xl font-bold text-fuchsia-600 drop-shadow-sm">
+        <Link to="/">CEUB ID</Link>
+      </h1>
       <nav>
         <Link to="/settings">
           <svg
