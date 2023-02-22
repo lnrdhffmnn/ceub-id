@@ -1,10 +1,21 @@
-import { useAtomValue } from "jotai";
+import { useAtom } from "jotai";
 import { QRCodeSVG } from "qrcode.react";
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import { ceubIdAtom } from "../atoms/ceub-id";
 
 export default function Home() {
-  const { ra } = useAtomValue(ceubIdAtom);
+  const [ceubId, setCeubId] = useAtom(ceubIdAtom);
+  const { ra } = ceubId;
+
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  useEffect(() => {
+    if (searchParams.has("ra")) {
+      setCeubId({ ra: searchParams.get("ra") ?? "" });
+      setSearchParams({});
+    }
+  }, []);
 
   return ra ? (
     <>
