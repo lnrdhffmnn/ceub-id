@@ -13,11 +13,11 @@ export default defineConfig({
       manifest: {
         name: "CEUB ID",
         short_name: "CEUB ID",
-        description: "",
-        theme_color: "#f4f4f5",
-        background_color: "#f4f4f5",
+        description: "CEUB ID",
+        background_color: "#ffffff",
         display: "standalone",
         orientation: "portrait",
+        lang: "pt-BR",
         icons: [
           {
             src: "icons/pwa-192x192.png",

@@ -13,7 +13,7 @@ export default function Home() {
         size={275}
         level="H"
         includeMargin
-        className="rounded-xl shadow-xl border border-zinc-300"
+        className="rounded-xl shadow-xl border dark:border-0 border-zinc-300"
       />
       <p className="font-mono font-bold tracking-widest absolute bottom-0">
         {ra}

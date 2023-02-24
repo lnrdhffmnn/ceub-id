@@ -32,7 +32,7 @@ export default function Settings() {
           placeholder={ceubId.ra}
           value={ra}
           onChange={event => setRa(event.target.value)}
-          className="px-4 py-2 outline-none font-mono border border-zinc-300 focus:border-fuchsia-300 shadow-sm rounded-md focus:ring ring-fuchsia-200 ring-opacity-50"
+          className="px-4 py-2 outline-none font-mono border bg-white dark:bg-black border-zinc-300 dark:border-zinc-700 focus:border-fuchsia-300 dark:focus:border-fuchsia-500 shadow-sm rounded-md focus:ring ring-fuchsia-200 dark:focus:ring-fuchsia-900 ring-opacity-50"
         />
       </div>
       <button
