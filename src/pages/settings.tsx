@@ -23,7 +23,7 @@ export default function Settings() {
   return (
     <form onSubmit={submit} className="w-full grid gap-4 max-w-[500px]">
       <div className="grid gap-1">
-        <label htmlFor="input-ra" className="font-bold">
+        <label htmlFor="input-ra" className="font-semibold">
           RA
         </label>
         <input
