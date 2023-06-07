@@ -17,6 +17,9 @@ const Index = {
 
     /** @type {HTMLParagraphElement} */
     pRa: document.querySelector("#ra"),
+
+    /** @type {HTMLDivElement} */
+    divQrcode: document.querySelector("#qrcode"),
   },
 
   globals: {
@@ -97,11 +100,41 @@ const Index = {
     }
 
     localStorage.setItem(Index.globals.localStorageKey, ra);
+    Index.loadRa();
     Index.updateApp();
   },
 
   updateApp() {
-    Index.elements.pRa.innerHTML = Index.globals.ra;
+    const { ra } = Index.globals;
+    const { divQrcode } = Index.elements;
+
+    Index.elements.pRa.innerHTML = ra;
+
+    if (ra.length) {
+      divQrcode.innerHTML = "";
+      const qr = new QRCode(divQrcode);
+      qr.makeCode(ra);
+      divQrcode.querySelector("img").draggable = false;
+    } else {
+      divQrcode.innerHTML = "";
+
+      const span1 = document.createElement("span");
+      span1.innerHTML = "Você precisa";
+
+      const anchor = document.createElement("a");
+      anchor.innerHTML = "preencher";
+      anchor.classList.add("open-settings");
+      anchor.addEventListener("click", () => {
+        Index.toggleDialog(true);
+      });
+
+      const span2 = document.createElement("span");
+      span2.innerHTML = "seus dados.";
+
+      divQrcode.appendChild(span1);
+      divQrcode.appendChild(anchor);
+      divQrcode.appendChild(span2);
+    }
   },
 };
 
