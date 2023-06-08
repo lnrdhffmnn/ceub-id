@@ -1,11 +1,11 @@
 @font-face {
   font-family: "Inter";
-  src: url(/fonts/Inter.ttf);
+  src: local("Inter"), url(/fonts/Inter.ttf);
 }
 
 @font-face {
   font-family: "JetBrains Mono";
-  src: url(/fonts/JetBrainsMono.ttf);
+  src: local("JetBrains Mono"), url(/fonts/JetBrainsMono.ttf);
 }
 
 :root {
@@ -35,6 +35,8 @@ body {
   color: var(--neutral);
   padding: 1.5rem;
   gap: 1.5rem;
+  accent-color: var(--primary);
+  user-select: none;
 }
 
 input,
