@@ -12,6 +12,7 @@ const CACHE_URLS = [
   "/lib/qrcodejs/js/qrcode.js",
   "/fonts/Inter.ttf",
   "/fonts/JetBrainsMono.ttf",
+  "/img/icons/favicon.ico",
 ];
 
 sw.addEventListener("install", event => {

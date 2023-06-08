@@ -1,11 +1,13 @@
 @font-face {
   font-family: "Inter";
   src: local("Inter"), url(/fonts/Inter.ttf);
+  font-display: swap;
 }
 
 @font-face {
   font-family: "JetBrains Mono";
   src: local("JetBrains Mono"), url(/fonts/JetBrainsMono.ttf);
+  font-display: swap;
 }
 
 :root {
