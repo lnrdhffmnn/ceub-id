@@ -1,8 +1,21 @@
+@font-face {
+  font-family: "Inter";
+  src: url(/fonts/Inter.ttf);
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url(/fonts/JetBrainsMono.ttf);
+}
+
 :root {
   --primary: #c00088;
   --secondary: #a3a3a3;
   --neutral: #0a0a0a;
   --base: #fafafa;
+
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
 }
 
 * {
@@ -17,7 +30,7 @@ body {
   min-height: 100svh;
   display: flex;
   flex-direction: column;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
   background-color: var(--base);
   color: var(--neutral);
   padding: 1.5rem;
@@ -53,7 +66,7 @@ button:focus {
 }
 
 input {
-  font-family: "Courier New", Courier, monospace;
+  font-family: var(--font-mono);
 }
 
 header {
@@ -134,7 +147,7 @@ a:hover {
 #ra {
   position: absolute;
   bottom: 0;
-  font-family: "Courier New", Courier, monospace;
+  font-family: var(--font-mono);
   font-weight: bold;
   letter-spacing: 0.1rem;
 }

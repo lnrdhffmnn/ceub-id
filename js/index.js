@@ -4,7 +4,7 @@ const Index = {
     dialog: document.querySelector("dialog"),
 
     /** @type {NodeListOf<HTMLElement>} */
-    settingsBtn: document.querySelectorAll(".open-settings"),
+    settingsBtn: document.querySelectorAll(".btn-dialog-open"),
 
     /** @type {NodeListOf<HTMLButtonElement>} */
     btnDialogClose: document.querySelectorAll(".btn-dialog-close"),
@@ -123,7 +123,7 @@ const Index = {
 
       const anchor = document.createElement("a");
       anchor.innerHTML = "preencher";
-      anchor.classList.add("open-settings");
+      anchor.classList.add("btn-dialog-open");
       anchor.addEventListener("click", () => {
         Index.toggleDialog(true);
       });
