@@ -20,6 +20,14 @@
   --font-mono: "JetBrains Mono", monospace;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --secondary: #262626;
+    --neutral: #fafafa;
+    --base: #0a0a0a;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -49,6 +57,7 @@ button {
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
   font-weight: bold;
+  color: var(--neutral);
 }
 
 input:focus,
@@ -224,5 +233,20 @@ a:hover {
   #qrcode:has(a) {
     flex-direction: column;
     gap: 0;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  input {
+    border-color: var(--secondary);
+    background-color: #000;
+  }
+
+  button {
+    color: var(--neutral);
+  }
+
+  dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.3);
   }
 }
