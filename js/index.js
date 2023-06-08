@@ -28,8 +28,8 @@ const Index = {
   },
 
   init() {
+    Index.addServiceWorker();
     Index.loadRa();
-
     Index.events();
   },
 
@@ -50,6 +50,12 @@ const Index = {
       "submit",
       Index.handleSettingsFormSubmit
     );
+  },
+
+  addServiceWorker() {
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/service-worker.js", { scope: "/" });
+    }
   },
 
   /** @param {boolean} open */
